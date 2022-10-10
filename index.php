@@ -13,7 +13,11 @@
 require_once 'car.php';
 require_once 'bycicle.php';
 require_once 'vehicle.php';
+require_once 'truck.php';
 
+$truck1 = new Truck(0, "red", 3, "fuel");
+
+echo $truck1->filling();
 
 
 ?>
