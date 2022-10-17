@@ -1,12 +1,11 @@
 <?php
-require 'vehicle.php';
 
 abstract class HighWay 
 {
 
-    private array $currentVehicles;
-    private int $nbLane;
-    private int $maxSpeed;
+    protected array $currentVehicles;
+    protected int $nbLane;
+    protected int $maxSpeed;
 
 
     /**
@@ -72,8 +71,6 @@ abstract class HighWay
     /**
      * 
      */
-    abstract public function addVehicle(Vehicle $vehicle) {
-
-        
-    }
+    abstract public function addVehicle(Vehicle $vehicle);
+    
 }

@@ -12,12 +12,28 @@
 
 require_once 'car.php';
 require_once 'bycicle.php';
-require_once 'vehicle.php';
 require_once 'truck.php';
+require_once  'motorway.php';
+require_once 'pedestrianway.php';
+require_once 'residentialway.php';
 
-$truck1 = new Truck(0, "red", 3, "fuel");
+$truck = new Truck(0, "red", 3, "fuel");
+$car = new Car("red", 5, 'electric');
+$motorway = new Motorway();
+$bycicle = new Bycicle("yellow", 1);
+$pedestrianWay = new PedestrianWay();
+$residentialWay = new ResidentialWay();
 
-echo $truck1->filling();
+$residentialWay->addVehicle($car);
+
+$pedestrianWay->addVehicle($bycicle);
+
+var_dump($residentialWay->getCurrentVehicles());
+
+
+
+
+
 
 
 ?>

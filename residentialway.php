@@ -1,13 +1,19 @@
 <?php
 
-require 'highway.php';
-require 'vehicle.php';
+
 
 
 final class ResidentialWay extends HighWay
 {
-    private array $currentVehicles;
-    private int $nbLane = 2;
-    private int $maxSpeed = 50;
+    protected array $currentVehicles;
+    protected int $nbLane = 2;
+    protected int $maxSpeed = 50;
 
-}
+    public function addVehicle(Vehicle $vehicle)
+    {
+        
+            $currentVehicles[] = $vehicle;
+            $this->currentVehicles = $currentVehicles;
+        }
+    }
+
