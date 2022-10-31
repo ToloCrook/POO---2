@@ -28,8 +28,18 @@ $residentialWay->addVehicle($car);
 
 $pedestrianWay->addVehicle($bycicle);
 
-var_dump($residentialWay->getCurrentVehicles());
+$car->setHasParkBrake(true);
 
+try {
+    $car->start();
+} catch(\Exception $e) {
+    $car->setParkBrake();
+} finally {
+    echo 'Ma voiture roule comme un donut';
+}
+
+var_dump($car->start());
+ 
 
 
 

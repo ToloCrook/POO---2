@@ -17,6 +17,17 @@ class Vehicle
             $this->color = $color;
             $this->nbSeats = $nbSeats;
         }
+
+        public function start()
+        {
+            $this->currentSpeed = 0;
+            $sentence= "";
+            while ($this->currentSpeed <= 0) {
+                $this->currentSpeed++;
+                $sentence .= "Let's start this vehicle";
+            }
+            return $sentence;
+        }
     
         public function forward(): string
         {
